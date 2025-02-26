@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AKM Technical Works</title>
+    <link rel="shortcut icon" type="x-icon" href="AKM Logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -12,12 +13,15 @@
 <body>
     <header>
     <div id="nav" class="nav">
-        <div class="heading"><a id="heading" class="heading" href="">AKM Technical Works</a></div>
+        <div class="heading"><a id="heading" class="heading" href="#home">
+            <img class="logo" src="AKM Logo.svg" alt="">
+            AKM Technical Works
+        </a></div>
         <div class="navbar">
-            <a class="pages" href="">HOME</a>
-            <a class="pages" href="">ABOUT</a>
-            <a class="pages" href="">LEADERSHIP</a>
-            <a class="pages" href="">CONTACT US</a>
+            <a class="pages" href="#home">HOME</a>
+            <a class="pages" href="#about">SERVICES</a>
+            <a class="pages" href="#company">ABOUT</a>
+            <a class="pages" href="#contact">CONTACT US</a>
         </div>
     </div>
     </header>
@@ -27,20 +31,26 @@
     <!-- Hero Section -->
 
     <div class="hero">
+        <div class="hero-content">
+            <h1 class="hero-heading">Cool Comfort, Expert Care</h1>
+            <p class="hero-tag">Reliable AC repair services to keep your home cool and comfortable. Fast, affordable, and done right the first time!</p>
+            <button onclick="scrollToContact()" class="contact-btn">Get a Quote</button>
+        </div>
+    </div>
+
+    <!-- <div id="home" class="hero">
         <div class="hero-heading">Cool Comfort, Expert Care</div>
         <div class="hero-tag">Reliable AC repair services to keep your home cool and comfortable. Fast, affordable, and done right the first time!</div>
-        <button class="contact-btn">Get a Quote</button>
-    </div>
+        <button onclick="scrollToContact()" class="contact-btn">Get a Quote</button>
+    </div> -->
 
 
 
     <!-- Why Us Section -->
 
-    <div class="services"> 
-        <div class="page-heading">About Us</div>
-        <div class="service-desc">With over 44 years of industry expertise, we are a trusted leader in air-conditioning maintenance, dedicated to keeping your systems running smoothly and efficiently. Our company prides itself on delivering top-notch services with a focus on reliability, professionalism, and customer satisfaction.</div>
+    <div id="about" class="services"> 
         <div class="page-heading">Our Services</div>
-        <!-- <div class="service-desc">We specialize in comprehensive duct maintenance for central air-conditioning systems, ensuring optimal performance and efficiency.</div> -->
+        <div class="service-desc">We specialize in comprehensive duct maintenance for central air-conditioning systems, utilizing advanced techniques and high-quality equipment to ensure optimal performance, energy efficiency, and long-term reliability.</div>
 
         <div class="features">
             <div class="feature">
@@ -103,46 +113,39 @@
 
     <div class="quote">
         <div class="quote-text">An innovative company working with the latest technologies</div>
-        <div class="quote-btn">Get a Quote</div>
+        <div onclick="scrollToContact()" class="quote-btn">Get a Quote</div>
     </div>
 
 
 
     <!-- Our Employees -->
 
-    <div class="ourteam">
-        <div class="page-heading">Leadership</div>
-        <div class="team-desc">Our commitment to excellence means better service delivery and, ultimately, greater satisfaction for our clients. That’s why we offer a satisfaction guarantee on all of our work. We’re not just aiming to meet expectations—we strive to exceed them every time.</div>
-        <div class="team">
-            <div class="pic2" style="background-image: url('https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-                <div class="pic-content">
-                    PP Habib
-                    <div class="designation">Chairman</div>
-                </div>
+    <div id="company" class="ourteam">
+        <div class="page-heading">About Us</div>
+        <div class="service-desc">With over 44 years of industry expertise, we are a trusted leader in air-conditioning maintenance, dedicated to keeping your systems running smoothly and efficiently. Our company prides itself on delivering top-notch services with a focus on reliability, professionalism, and customer satisfaction.</div>
+        <div class="about-company">
+            <div class="company">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#252569" class="bi bi-eye" viewBox="0 0 16 16">
+                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                </svg>
+                <div class="page-heading">Vision</div>
+                <div class="comp-desc">To be the most trusted and innovative air conditioning maintenance provider in the UAE, ensuring comfort and sustainability for every client through superior service and advanced technology.</div>
             </div>
-            <div class="pic2" style="background-image: url('https://images.unsplash.com/photo-1551128997-c2b66772f982?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-                <div class="pic-content">
-                    PB Kunjumohamed
-                    <div class="designation">Managing Director</div>
-                </div>
+            <div class="company">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#252569" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                    <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+                    <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                </svg>
+                <div class="page-heading">Mission</div>
+                <div class="comp-desc">With 40 years of expertise, we provide reliable, efficient, and eco-friendly AC maintenance solutions. Our mission is to ensure optimal performance, energy efficiency, and comfort for residential and commercial clients in Dubai and beyond.</div>
             </div>
-            <div class="pic2" style="background-image: url('https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-                <div class="pic-content">
-                    Nishi Shafeeq
-                    <div class="designation">Operations Manager</div>
-                </div>
-            </div>
-            <div class="pic2" style="background-image: url('https://images.unsplash.com/photo-1551128997-c2b66772f982?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-                <div class="pic-content">
-                    Anwar Abdu
-                    <div class="designation">Finance Manager</div>
-                </div>
-            </div>
-            <div class="pic2" style="background-image: url('https://images.unsplash.com/photo-1542361345-89e58247f2d5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-                <div class="pic-content">
-                    Dr. Fajish Habib
-                    <div class="designation">Advisory Board</div>
-                </div>
+            <div class="company">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#252569" class="bi bi-lock" viewBox="0 0 16 16">
+                <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1"/>
+                </svg>
+                <div class="page-heading">Commitment</div>
+                <div class="comp-desc">We pride ourselves on our dedicated team of skilled, reliable, and professional experts in air conditioning maintenance. Each member of our team is highly trained and committed to delivering top-quality service.</div>
             </div>
         </div>
     </div>
@@ -151,7 +154,7 @@
 
     <!-- Contact Section  -->
 
-    <div class="contact">
+    <div id="contact" class="contact">
         <div class="page-heading">Contact Us</div>
         <div class="socials">
             <div class="contact-info">
@@ -177,7 +180,22 @@
                 <div class="contact-desc">P.O.Box : 8893, Dubai, U.A.E.</div>
             </div>
         </div>
+        <div class="whatsapp">
+            Alternatively, feel free to message us on WhatsApp, and our team will respond promptly.
+            <button class="whatsapp-btn" onclick="location.href='https://wa.me/0919744300070'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                </svg>
+                WhatsApp
+            </button>
+        </div>
     </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">Copyright ©AKM Technical Works</div>
+    </footer>
 
 
 </body>

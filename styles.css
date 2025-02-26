@@ -5,6 +5,10 @@
     scroll-padding-top: 90px;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: "Poppins", serif;
 }
@@ -34,6 +38,16 @@ body{
     color: white;
     font-size: 28px;
     font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo{
+    display: flex;
+    height: 50px;
+    width: 50px;
 }
 
 .heading-color{
@@ -75,8 +89,60 @@ body{
     cursor: pointer;
 }
 
-.hero{
-    background-image: url('https://images.unsplash.com/photo-1610402919524-dcd64aa0b17b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your image URL */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust darkness (0.6 is a good balance) */
+    z-index: 1; /* Places overlay above the background but below text */
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Background Images */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    z-index: 0; /* Keep backgrounds behind everything */
+}
+
+.hero-background.active {
+    opacity: 1;
+}
+
+/* Ensure hero text stays above the background */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* .hero{
+    background-image: url('https://images.unsplash.com/photo-1610402919524-dcd64aa0b17b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: multiply;
     background-size: cover;
@@ -90,7 +156,7 @@ body{
     justify-content: center;
     color: white;
     text-align: center;
-}
+} */
 
 .hero-heading{
     color: white;
@@ -118,7 +184,7 @@ body{
     font-family: "Poppins", serif;
     font-size: 16px;
     border-radius: 50px;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 
 .contact-btn:hover{
@@ -270,46 +336,33 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     padding: 100px 0px;
     gap: 30px;
 }
 
-.team{
+.about-company{
+    display: flex;
+    gap: 60px;
+}
+
+.company{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 40px;
+}
+
+.comp-desc{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-}
-
-.pic2{
-    display: flex;
-    width: 300px;
-    height: 380px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    align-items: center;
-    justify-content: center;
-    transition: 0.5s;
-}
-
-.pic2:hover{
-    background-color: rgba(37, 37, 105,1);
-    background-blend-mode: multiply;
-    transform: scale(1.1);
-    cursor: default;
-}
-
-.team-desc{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 800px;
-    text-align: center;
+    width: 400px;
+    text-align: justify;
     color: gray;
     font-size: 16px;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
 }
 
 .designation{
@@ -391,4 +444,45 @@ body{
     font-size: 16px;
     color: gray;
     margin-top: -25px;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    color: gray;
+    border-top: 1px solid darkgray;
+    padding: 30px 0px;
+}
+
+.whatsapp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.whatsapp-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 180px;
+    background-color: #252569;
+    border: 1px solid #252569;
+    color: white;
+    font-size: 16px;
+    font-family: "Poppins", serif;
+    border-radius: 35px;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover{
+    background-color: gray;
+    border: solid 1px gray;
+    cursor: pointer;
 }
