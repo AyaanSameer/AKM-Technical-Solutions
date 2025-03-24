@@ -56,3 +56,21 @@ function changeBackground() {
 
 // Change background every 5 seconds
 setInterval(changeBackground, 5000);
+
+
+
+//Hamburger Menu
+const hamMenu = document.querySelector(".ham-menu");
+
+const offScreenMenu = document.querySelector(".off-screen-menu");
+
+const hamNav = document.querySelector(".nav");
+
+var head = document.getElementById('heading');
+
+hamMenu.addEventListener("click", () => {
+  hamMenu.classList.toggle("active");
+  offScreenMenu.classList.toggle("active");
+  hamNav.classList.toggle('active');
+  head.classList.add('heading-color');
+});
