@@ -22,7 +22,7 @@ window.addEventListener('scroll', changeNav);
 
 function scrollToContact() {
     window.scrollTo({
-        top: document.getElementById("contact").offsetTop,
+        top: document.getElementById("contact").offsetTop - 90,
         behavior: "smooth"
     });
 }
