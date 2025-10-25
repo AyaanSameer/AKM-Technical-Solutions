@@ -7,10 +7,16 @@
 
 html{
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 body{
     font-family: "Poppins", serif;
+    overflow-x: hidden;
 }
 
 .nav{
@@ -419,9 +425,70 @@ body{
     cursor: pointer;
 }
 
+.work-gallery{
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0px;
+    gap: 80px;
+    background-color: rgb(236, 236, 236);
+}
+
+.gallery-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.underline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    height: 3px;
+    background-color: #252569;
+}
+
+.gallery{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    margin-top: -15px;
+}
+
+.gallery-phone{
+    display: none;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.image{
+    display: flex;
+    height: auto;
+    width: 330px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.image:hover{
+    transform: scale(1.03);
+    cursor: default;
+}
+
 .contact{
     scroll-snap-align: start;
-    background-color: rgb(236, 236, 236);
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -505,7 +572,11 @@ body{
 @media only screen and (max-width: 1439px){
 
     .nav{
-        padding: 0px 75px;
+        padding: 0px 50px;
+    }
+
+    .navbar{
+        gap: 40px;
     }
 
     .hero-heading{
@@ -567,6 +638,21 @@ body{
         width: 280px;
     }
 
+    .underline{
+        width: 700px;
+    }
+
+    .gallery{
+        display: none;
+    }
+
+    .gallery-phone{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        gap: 10px;
+    }
+
     .socials{
         gap: 50px;
     }
@@ -579,7 +665,7 @@ body{
 @media only screen and (max-width: 1023px){
 
     .nav{
-        padding: 0px 50px;
+        padding: 0px 30px;
     }
     
     .heading{
@@ -593,7 +679,7 @@ body{
     }
 
     .navbar{
-        gap: 30px;
+        gap: 20px;
     }
 
     .pages{
@@ -681,6 +767,10 @@ body{
     .comp-desc{
         width: 200px;
         font-size: 15px;
+    }
+
+    .gallery{
+        flex-direction: column;
     }
 
     .socials{
@@ -784,9 +874,9 @@ body{
     .off-screen-menu{
         display: flex;
         background-color: white;
-        height: 200px;
+        height: 250px;
         width: 100%;
-        max-height: 200px;
+        max-height: 250px;
         position: fixed;
         top: -200px;
         z-index: 3;
@@ -908,6 +998,18 @@ body{
         gap: 20px;
     }
 
+    .work-gallery{
+        gap: 50px;
+    }
+
+    .underline{
+        width: 300px;
+    }
+
+    .image{
+        width: 150px;
+    }
+
     .page-heading-2{
         font-size: 32px;    
     }
@@ -937,6 +1039,10 @@ body{
         width: 300px;
         text-align: center;
         gap: 25px;
+    }
+
+    .footer{
+        padding: 20px 0px;
     }
 
 }
